@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"> 
+    <meta content="yes" name="apple-mobile-web-app-capable"> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="telephone=no" name="format-detection">
+    <title>商品详情</title>
+    <style>
+        html, body {
+          position: relative;
+          height: 100%;
+        }
+        body {
+          background: #fff;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 12px;
+          color:#000;
+          margin: 0;
+          padding: 0;
+        }
+        img{
+            display: inline-block;       
+        }
+        a,button,input{ 
+            outline: none;
+        }
+        /*活动信息*/
+        #act_img{
+            width: 100%;
+        }
+        .activity{
+            width: 100%;            
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;                   
+        }
+        .act_desc{
+            font-weight: bold;
+            width: 80%;
+            margin: 0 auto;
+            padding: 5px 10px;
+            float: left;
+            border-right: 1px dotted #999;
+            font-size: 14px;           
+        }
+        .act_share{
+            width: 7%;
+            float: left;
+            padding: 5px 13px;
+        }
+        .act_share>img{
+            width: 20px;
+        }
+        .act_pric{
+            font-size: 16px;
+            color: #f2733b;
+            margin: 0 10px;
+            display: inline-block;
+            width: 60%;
+        }
+        .act_on{
+            color: #999;
+            margin: 0 10px;
+        }
+        .act_type{
+            background-color: #f2733b;
+            color: #fff;
+            padding: 0 4px;
+        }
+        /*活动规则*/
+        .act_role{
+            padding: 10px 20px;
+        }
+        .act_role>h1{
+            font-size: 16px;
+            color: #777;
+        }
+        .role_desc{
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        .role_index{
+            background-color: #999;
+            color: #fff;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            text-align: center;
+        }
+        .role_text{
+            color: #666;
+            padding: 10px 0;
+            line-height: 20px;
+        }
+        /*tabBar*/
+        .tabBar{
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+            background-color: #fafafa;
+            position: fixed;
+            bottom: 0;
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            border-top: 1px solid #ddd;  
+                       
+        }
+        .tabBar>span{       
+            flex-basis:50%;
+            text-align: center;
+            position: relative;
+        }
+        #gotoIndex{
+            border-right: 1px solid #ddd;           
+        }
+        #gotoOffer{
+            background-color: #bc2929;
+            color: #fff;
+        }
+        .icon{
+            width: 15px;
+            position: relative;
+            top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/img@750_305_2.jpg" alt="活动图片" id="act_img">
+    <div class="activity">
+        <span class="act_desc">【0元团】10元话费抵扣券，成团后每人各得一张，话费充值超20元可抵10元，限量1000件</span>
+        <span class="act_share">
+            <img src="images/icon__share.png" alt="分享图片">
+            分享
+        </span>
+        <span class="act_pric">￥0</span>
+        <span class="act_on">已拼94%</span>
+        <span class="act_type">2人团</span>
+    </div>
+    <!-- 活动规则 -->
+    <div class="act_role">
+        <h1>活动规则</h1>
+        <div class="role_desc">
+            <span class="role_index">1</span>
+            <span class="role_text">本活动由广东联通举办，您是广东联通用户，可发起拼团，若能邀请到非广东联通用户参团成功，则所有成员均可免费获得10元话费抵扣券一张。</span>
+        </div>
+        <div class="role_desc">
+            <span class="role_index">2</span>
+            <span class="role_text">每个广东联通用户限团一次，超过48h仍未成团可再次发起，发起拼团后不可退团。</span>
+        </div>
+        <div class="role_desc">
+            <span class="role_index">3</span>
+            <span class="role_text">团购商品将于每月的15、30日发放，发放成功后会有短信通知，您可登录 “联通手机营业厅APP首页-交费充值-折扣优惠” 查看，团购商品需在发放后的30天内进行使用，逾期失效，不再补发。</span>
+        </div>
+         <div class="role_desc">
+            <span class="role_index">4</span>
+            <span class="role_text">更多详情可咨询www.10010.com导购。</span>
+        </div>
+    </div>
+    <!-- tabBar -->
+    <div class="tabBar">
+        <span id="gotoIndex">
+            <img src="images/icon__index_active.png" alt="图片" class="icon">
+            首页</span>
+        <span id="gotoOffer">
+            去拼团</span>
+    </div>
+
+</body>
+</html>

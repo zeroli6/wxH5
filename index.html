@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"> 
+    <meta content="yes" name="apple-mobile-web-app-capable"> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="./dist/swiper.min.css">
+    <title>微信H5页面index</title>
+     <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    img{
+        display: inline-block;       
+    }
+    a,button,input{ 
+        outline: none;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 120px;
+    }
+    .swiper-slide {      
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text horizontal */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-slide>img{
+        width: 100%;
+    }
+    /*活动详情*/
+    .activity{
+        width: 95%;
+        height: 260px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin: 10px auto;
+        background: #fff;
+    }
+    .act_img{
+        width: 100%;
+        height: 180px;
+        display: block;
+    }
+    .act_text{
+        height: 100px;        
+    }
+    .act_des{
+        font-weight:bold;
+        width: 92%;
+        margin: 0 auto;
+    }
+    .act_pric{
+        font-size: 16px;
+        color: #f2733b;
+        margin: 0 10px;
+    }
+    .act_on{
+        color: #999;
+        margin: 0 3px;
+    }
+    .act_type{
+        background-color: #f2733b;
+        color: #999;
+        padding: 0 4px;
+    }
+    .act_go{
+        background-color: #b62323;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 15px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        position: relative;
+        left: 120px;
+        border:0;
+    }
+    /*tabBar*/
+    .tabBar{
+        height: 20px;
+        line-height: 20px;
+        width: 100%;
+        background-color: #fafafa;
+        position: fixed;
+        bottom: 0;
+        display: -webkit-flex; /* Safari */
+        display: flex;
+        border-top: 1px solid #ddd;  
+        padding: 5px 0;            
+    }
+    .tabBar>span{       
+        flex-basis:50%;
+        text-align: center;
+        position: relative;
+    }
+    #gotoIndex{
+        border-right: 1px solid #ddd;
+    }
+    .icon{
+        width: 15px;
+        position: relative;
+        top: 3px;
+    }
+
+    /*登录框*/
+    .login{
+        display: none;
+        height: 200px;       
+        width: 100%;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;        
+        padding: 5px 0;
+        z-index:1002;
+    }
+    .login_title{
+        text-align: center;
+        display: block;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    #login_form{
+        position: relative;
+    }
+    #login_form>input{
+        box-sizing: border-box;
+        background-color: #f6f6f6;
+        border: none;
+        padding: 10px 0 10px 10px;
+        margin: 5px 10px;
+        width: 95%;      
+    }
+    .login_ver{
+        border: 1px solid #b62323;
+        color: #b62323;
+        border-radius: 15px;
+        padding: 5px 10px;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+    #login_form>#login_submit{
+        border-radius: 20px;
+        background-color: #b62323;
+        color: #fff;
+    }
+    #login_form>.login_notice{
+        visibility: hidden;
+        color: #b62323;
+        padding-left: 10px;    
+    }
+    .black_overlay{
+      display:none;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background-color: #f6f6f6;
+      z-index:1001;
+      -moz-opacity: 0.8;
+      opacity:.80;
+      filter: alpha(opacity=88);
+    }
+
+  </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/demo__swiper_index@750_239.png" alt="活动图片" width: "100%"></div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        <!-- 分页器 -->
+        <div class="swiper-pagination"></div>    
+    </div>
+    <!-- 活动详情 -->
+    <div class="activity">
+        <img src="./images/img@750_305_1.jpg" alt="活动图片" class="act_img">
+        <div class="act_text">
+            <div class="act_des">
+                【0元团】10元话费抵扣券，成团后每人各得一张，话费充值超20元可抵10元，限量1000件
+            </div>
+            <span class="act_pric">￥0</span>
+            <span class="act_on">已拼94%</span>
+            <span class="act_type">2人团</span>
+            <input style="display: none;" type="text" name="login_index" value="false"></input>
+            <button class="act_go" id="isLogin">去拼团</button>
+        </div>
+    </div>
+    <div class="activity">
+        <img src="./images/img@750_305_2.jpg" alt="活动图片" class="act_img">
+        <div class="act_text">
+            <div class="act_des">
+                【0元团】50元话费抵扣券，成团后每人各得一张，话费充值超100元可抵50元，限量1000件
+            </div>
+            <span class="act_pric">￥0</span>
+            <span class="act_on">已拼94%</span>
+            <span class="act_type">2人团</span>
+            <input style="display: none;" type="text" name="login_index" value="false" id="if_login"></input>
+            <button class="act_go" id="notLogin">去拼团</button>
+        </div>
+    </div>
+    <!-- tabBar -->
+    <div class="tabBar">
+        <span id="gotoIndex">
+            <img src="images/icon__index_active.png" alt="图片" class="icon">
+            首页</span>
+        <span id="myOffer">
+            <img src="images/icon__user_active.png" alt="图片" class="icon">
+            我的拼团</span>
+    </div>
+
+    <!-- 登录框 -->
+    <div class="login">
+        <span class="login_title">请登录</span>
+        <form action="" id="login_form">
+            <input id="phone" type="tel" name="phone" value="" placeholder="请输入手机号">
+            <span class="login_ver">请输入验证码</span>
+            <br>
+            <input id="phone" type="text" name="verify" value="" placeholder="请输入验证码">
+            <br>
+            <span class="login_notice"></span>
+            <input id="login_submit" type="button" value="登录">
+        </form> 
+    </div>
+    <div id="fade" class="black_overlay"></div>
+
+    <script src="./dist/swiper.min.js"></script>
+    <script type="text/javascript">
+        var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,            
+            // 分页器
+            pagination: {
+              el: '.swiper-pagination',
+            },
+          })  
+        window.onload = function(){
+            var isLogin = document.getElementById("isLogin");
+            var notLogin = document.getElementById("notLogin");           
+            // 跳转到详情页面
+            isLogin.onclick = function(){                
+                window.location.href = "./detail.html"
+            }
+            // 跳转到登陆
+            notLogin.onclick = function(){
+                // 出现登陆框
+                document.getElementsByClassName("login")[0].style.display = 'block';
+                document.getElementsByClassName("black_overlay")[0].style.display = 'block';
+                // 验证手机号               
+                var loginSub = document.getElementById("login_submit");
+                loginSub.onclick = function(){
+                    var phone = document.getElementById("phone").value;
+                    console.log(phone);
+                    console.log(isPoneAvailable(phone));
+                    if(isPoneAvailable(phone)){
+                        // 跳转到页面详情
+                        window.location.href = "./detail.html"
+                    }else{
+                        // 错误信息提示
+                        document.getElementsByClassName("login_notice")[0].innerHTML = '请输入正确的手机号';
+                        document.getElementsByClassName("login_notice")[0].style.visibility = 'visible';
+                    }                   
+                }
+                
+            }
+            toMyOffered();
+            toIndex();
+        } 
+        
+        // 跳转到首页
+        function toIndex(){
+            var toIndex = document.getElementById("gotoIndex");
+            toIndex.onclick = function(){
+                window.location.href = "./index.html"
+            }
+        }   
+        // 跳转到我的拼团
+        function toMyOffered(){
+            var myOffer = document.getElementById("myOffer");
+            myOffer.onclick = function(){
+                window.location.href = "./myOffered.html"
+            }
+        }  
+        // 验证手机号
+        function isPoneAvailable(str) {
+            var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+            if (!myreg.test(str)) {
+                return false;
+            } else {
+                return true;
+            }
+        } 
+    </script>
+</body>
+
+</html>
